@@ -423,7 +423,7 @@ commands:
         --paths.dev corpus/dev.spacy
         --gpu-id ${vars.gpu_id}
         --code tok2vec_pipeline.py
-        - >-
+      - >-
         python -m spacy train
         configs/tok2vec.cfg
         --nlp.lang ${vars.lang}
