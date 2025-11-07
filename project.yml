@@ -296,7 +296,7 @@ commands:
         --nlp.lang ${vars.lang}
         --vars.model-type bilstm-crf
         --vars.project-name ${vars.project_name}
-        --vars.run-name "1"
+        --vars.run-name "baseline-bilstm-crf-1"
         --vars.include-static-vectors false
         --output training/baseline-bilstm-crf/1/
         --paths.train corpus/train.spacy
@@ -309,7 +309,7 @@ commands:
         --nlp.lang ${vars.lang}
         --vars.model-type bilstm-crf
         --vars.project-name ${vars.project_name}
-        --vars.run-name "2"
+        --vars.run-name "baseline-bilstm-crf-2"
         --vars.include-static-vectors false
         --output training/baseline-bilstm-crf/2
         --paths.train corpus/train.spacy
@@ -322,7 +322,7 @@ commands:
         --nlp.lang ${vars.lang}
         --vars.model-type bilstm-crf
         --vars.project-name ${vars.project_name}
-        --vars.run-name "3"
+        --vars.run-name "baseline-bilstm-crf-3"
         --vars.include-static-vectors false
         --output training/baseline-bilstm-crf/3
         --paths.train corpus/train.spacy
@@ -403,7 +403,7 @@ commands:
         --nlp.lang ${vars.lang}
         --vars.model-type bilstm
         --vars.project-name ${vars.project_name}
-        --vars.run-name "baseline-bilstm-crf-1"
+        --vars.run-name "baseline-bilstm-1"
         --vars.include-static-vectors false
         --output training/baseline-bilstm/1/
         --paths.train corpus/train.spacy
@@ -416,7 +416,7 @@ commands:
         --nlp.lang ${vars.lang}
         --vars.model-type bilstm
         --vars.project-name ${vars.project_name}
-        --vars.run-name "baseline-bilstm-crf-2"
+        --vars.run-name "baseline-bilstm-2"
         --vars.include-static-vectors false
         --output training/baseline-bilstm/2
         --paths.train corpus/train.spacy
@@ -429,7 +429,7 @@ commands:
         --nlp.lang ${vars.lang}
         --vars.model-type bilstm
         --vars.project-name ${vars.project_name}
-        --vars.run-name "baseline-bilstm-crf-3"
+        --vars.run-name "baseline-bilstm-3"
         --vars.include-static-vectors false
         --output training/baseline-bilstm/3
         --paths.train corpus/train.spacy
