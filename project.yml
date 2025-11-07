@@ -545,7 +545,7 @@ commands:
         --code tok2vec_pipeline.py
       - >-
         python -m spacy evaluate
-        training/baseline_crf/1/model-best/
+        training/baseline-crf/1/model-best/
         corpus/dev.spacy
         --output metrics/baseline-crf-dev/1.json
         --code tok2vec_pipeline.py
@@ -559,7 +559,7 @@ commands:
         --gpu-id ${vars.gpu_id}
       - >-
         python -m spacy evaluate
-        training/baseline_crf/2/model-best/
+        training/baseline-crf/2/model-best/
         corpus/dev.spacy
         --output metrics/baseline-crf-dev/2.json
         --code tok2vec_pipeline.py
