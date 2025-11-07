@@ -498,51 +498,51 @@ commands:
   - name: "baseline-crf"
     help: "Train a CRF NER from scratch"
     script:
-      - python -c "import os; os.makedirs('training/baseline-crf/', exist_ok=True)"
-      - python -c "import os; os.makedirs('training/baseline-crf/1/', exist_ok=True)"
-      - python -c "import os; os.makedirs('training/baseline-crf/2/', exist_ok=True)"
-      - python -c "import os; os.makedirs('training/baseline-crf/3/', exist_ok=True)"
-      - python -c "import os; os.makedirs('metrics/baseline-crf-dev/', exist_ok=True)"
-      - python -c "import os; os.makedirs('metrics/baseline-crf-test/', exist_ok=True)"
-      - >-
-        python -m spacy train
-        configs/tok2vec.cfg
-        --nlp.lang ${vars.lang}
-        --vars.model-type crf
-        --vars.project-name ${vars.project_name}
-        --vars.run-name "baseline-crf-1"
-        --vars.include-static-vectors false
-        --output training/baseline-crf/1/
-        --paths.train corpus/train.spacy
-        --paths.dev corpus/dev.spacy
-        --gpu-id ${vars.gpu_id}
-        --code tok2vec_pipeline.py
-      - >-
-        python -m spacy train
-        configs/tok2vec.cfg
-        --nlp.lang ${vars.lang}
-        --vars.model-type crf
-        --vars.project-name ${vars.project_name}
-        --vars.run-name "baseline-crf-2"
-        --vars.include-static-vectors false
-        --output training/baseline-crf/2
-        --paths.train corpus/train.spacy
-        --paths.dev corpus/dev.spacy
-        --gpu-id ${vars.gpu_id}
-        --code tok2vec_pipeline.py
-      - >-
-        python -m spacy train
-        configs/tok2vec.cfg
-        --nlp.lang ${vars.lang}
-        --vars.model-type crf
-        --vars.project-name ${vars.project_name}
-        --vars.run-name "baseline-crf-3"
-        --vars.include-static-vectors false
-        --output training/baseline-crf/3
-        --paths.train corpus/train.spacy
-        --paths.dev corpus/dev.spacy
-        --gpu-id ${vars.gpu_id}
-        --code tok2vec_pipeline.py
+      # - python -c "import os; os.makedirs('training/baseline-crf/', exist_ok=True)"
+      # - python -c "import os; os.makedirs('training/baseline-crf/1/', exist_ok=True)"
+      # - python -c "import os; os.makedirs('training/baseline-crf/2/', exist_ok=True)"
+      # - python -c "import os; os.makedirs('training/baseline-crf/3/', exist_ok=True)"
+      # - python -c "import os; os.makedirs('metrics/baseline-crf-dev/', exist_ok=True)"
+      # - python -c "import os; os.makedirs('metrics/baseline-crf-test/', exist_ok=True)"
+      # - >-
+      #   python -m spacy train
+      #   configs/tok2vec.cfg
+      #   --nlp.lang ${vars.lang}
+      #   --vars.model-type crf
+      #   --vars.project-name ${vars.project_name}
+      #   --vars.run-name "baseline-crf-1"
+      #   --vars.include-static-vectors false
+      #   --output training/baseline-crf/1/
+      #   --paths.train corpus/train.spacy
+      #   --paths.dev corpus/dev.spacy
+      #   --gpu-id ${vars.gpu_id}
+      #   --code tok2vec_pipeline.py
+      # - >-
+      #   python -m spacy train
+      #   configs/tok2vec.cfg
+      #   --nlp.lang ${vars.lang}
+      #   --vars.model-type crf
+      #   --vars.project-name ${vars.project_name}
+      #   --vars.run-name "baseline-crf-2"
+      #   --vars.include-static-vectors false
+      #   --output training/baseline-crf/2
+      #   --paths.train corpus/train.spacy
+      #   --paths.dev corpus/dev.spacy
+      #   --gpu-id ${vars.gpu_id}
+      #   --code tok2vec_pipeline.py
+      # - >-
+      #   python -m spacy train
+      #   configs/tok2vec.cfg
+      #   --nlp.lang ${vars.lang}
+      #   --vars.model-type crf
+      #   --vars.project-name ${vars.project_name}
+      #   --vars.run-name "baseline-crf-3"
+      #   --vars.include-static-vectors false
+      #   --output training/baseline-crf/3
+      #   --paths.train corpus/train.spacy
+      #   --paths.dev corpus/dev.spacy
+      #   --gpu-id ${vars.gpu_id}
+      #   --code tok2vec_pipeline.py
       - >-
         python -m spacy evaluate
         training/baseline-crf/1/model-best/
