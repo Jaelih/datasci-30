@@ -59,7 +59,7 @@ workflows:
     - "get vectors"
     - "baseline-bilstm-crf"
     - "baseline-bilstm"
-    - "baseline-crf"
+    # - "baseline-crf"
     - "static_vectors-bilstm-crf"
     - "static_vectors-bilstm"
     - "static_vectors-crf"
