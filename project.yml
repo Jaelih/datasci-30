@@ -35,6 +35,7 @@ directories:
   - "vectors"
 
 vars:
+  project_name: "ds30"
   seed: 0
   gpu_id: 0
   lang: "tl"
@@ -294,7 +295,7 @@ commands:
         configs/tok2vec.cfg
         --nlp.lang ${vars.lang}
         --vars.model-type bilstm-crf
-        --vars.project-name "baseline-bilstm-crf"
+        --vars.project-name ${vars.project_name}
         --vars.run-name "1"
         --vars.include-static-vectors false
         --output training/baseline-bilstm-crf/1/
@@ -307,7 +308,7 @@ commands:
         configs/tok2vec.cfg
         --nlp.lang ${vars.lang}
         --vars.model-type bilstm-crf
-        --vars.project-name "baseline-bilstm-crf"
+        --vars.project-name ${vars.project_name}
         --vars.run-name "2"
         --vars.include-static-vectors false
         --output training/baseline-bilstm-crf/2
@@ -320,7 +321,7 @@ commands:
         configs/tok2vec.cfg
         --nlp.lang ${vars.lang}
         --vars.model-type bilstm-crf
-        --vars.project-name "baseline-bilstm-crf"
+        --vars.project-name ${vars.project_name}
         --vars.run-name "3"
         --vars.include-static-vectors false
         --output training/baseline-bilstm-crf/3
@@ -401,8 +402,8 @@ commands:
         configs/tok2vec.cfg
         --nlp.lang ${vars.lang}
         --vars.model-type bilstm
-        --vars.project-name "baseline-bilstm"
-        --vars.run-name "1"
+        --vars.project-name ${vars.project_name}
+        --vars.run-name "baseline-bilstm-crf-1"
         --vars.include-static-vectors false
         --output training/baseline-bilstm/1/
         --paths.train corpus/train.spacy
@@ -414,8 +415,8 @@ commands:
         configs/tok2vec.cfg
         --nlp.lang ${vars.lang}
         --vars.model-type bilstm
-        --vars.project-name "baseline-bilstm"
-        --vars.run-name "2"
+        --vars.project-name ${vars.project_name}
+        --vars.run-name "baseline-bilstm-crf-2"
         --vars.include-static-vectors false
         --output training/baseline-bilstm/2
         --paths.train corpus/train.spacy
@@ -427,8 +428,8 @@ commands:
         configs/tok2vec.cfg
         --nlp.lang ${vars.lang}
         --vars.model-type bilstm
-        --vars.project-name "baseline-bilstm"
-        --vars.run-name "3"
+        --vars.project-name ${vars.project_name}
+        --vars.run-name "baseline-bilstm-crf-3"
         --vars.include-static-vectors false
         --output training/baseline-bilstm/3
         --paths.train corpus/train.spacy
@@ -508,8 +509,8 @@ commands:
         configs/tok2vec.cfg
         --nlp.lang ${vars.lang}
         --vars.model-type crf
-        --vars.project-name "baseline-crf"
-        --vars.run-name "1"
+        --vars.project-name ${vars.project_name}
+        --vars.run-name "baseline-crf-1"
         --vars.include-static-vectors false
         --output training/baseline-crf/1/
         --paths.train corpus/train.spacy
@@ -521,8 +522,8 @@ commands:
         configs/tok2vec.cfg
         --nlp.lang ${vars.lang}
         --vars.model-type crf
-        --vars.project-name "baseline-crf"
-        --vars.run-name "2"
+        --vars.project-name ${vars.project_name}
+        --vars.run-name "baseline-crf-2"
         --vars.include-static-vectors false
         --output training/baseline-crf/2
         --paths.train corpus/train.spacy
@@ -534,8 +535,8 @@ commands:
         configs/tok2vec.cfg
         --nlp.lang ${vars.lang}
         --vars.model-type crf
-        --vars.project-name "baseline-crf"
-        --vars.run-name "3"
+        --vars.project-name ${vars.project_name}
+        --vars.run-name "baseline-crf-3"
         --vars.include-static-vectors false
         --output training/baseline-crf/3
         --paths.train corpus/train.spacy
@@ -601,8 +602,8 @@ commands:
         configs/tok2vec.cfg
         --nlp.lang ${vars.lang}
         --vars.model-type bilstm-crf
-        --vars.project-name "static_vectors-bilstm-crf"
-        --vars.run-name "1"
+        --vars.project-name ${vars.project_name}
+        --vars.run-name "static_vectors-bilstm-crf-1"
         --vars.include-static-vectors true
         --output training/static_vectors-bilstm-crf/1/
         --paths.train corpus/train.spacy
@@ -615,8 +616,8 @@ commands:
         configs/tok2vec.cfg
         --nlp.lang ${vars.lang}
         --vars.model-type bilstm-crf
-        --vars.project-name "static_vectors-bilstm-crf"
-        --vars.run-name "2"
+        --vars.project-name ${vars.project_name}
+        --vars.run-name "static_vectors-bilstm-crf-2"
         --vars.include-static-vectors true
         --output training/static_vectors-bilstm-crf/2
         --paths.train corpus/train.spacy
@@ -629,8 +630,8 @@ commands:
         configs/tok2vec.cfg
         --nlp.lang ${vars.lang}
         --vars.model-type bilstm-crf
-        --vars.project-name "static_vectors-bilstm-crf"
-        --vars.run-name "3"
+        --vars.project-name ${vars.project_name}
+        --vars.run-name "static_vectors-bilstm-crf-3"
         --vars.include-static-vectors true
         --output training/static_vectors-bilstm-crf/3
         --paths.train corpus/train.spacy
@@ -711,8 +712,8 @@ commands:
         configs/tok2vec.cfg
         --nlp.lang ${vars.lang}
         --vars.model-type bilstm
-        --vars.project-name "static_vectors-bilstm"
-        --vars.run-name "1"
+        --vars.project-name ${vars.project_name}
+        --vars.run-name "static_vectors-bilstm-1"
         --vars.include-static-vectors true
         --output training/static_vectors-bilstm/1/
         --paths.train corpus/train.spacy
@@ -725,8 +726,8 @@ commands:
         configs/tok2vec.cfg
         --nlp.lang ${vars.lang}
         --vars.model-type bilstm
-        --vars.project-name "static_vectors-bilstm"
-        --vars.run-name "2"
+        --vars.project-name ${vars.project_name}
+        --vars.run-name "static_vectors-bilstm-2"
         --vars.include-static-vectors true
         --output training/static_vectors-bilstm/2
         --paths.train corpus/train.spacy
@@ -739,8 +740,8 @@ commands:
         configs/tok2vec.cfg
         --nlp.lang ${vars.lang}
         --vars.model-type bilstm
-        --vars.project-name "static_vectors-bilstm"
-        --vars.run-name "3"
+        --vars.project-name ${vars.project_name}
+        --vars.run-name "static_vectors-bilstm-3"
         --vars.include-static-vectors true
         --output training/static_vectors-bilstm/3
         --paths.train corpus/train.spacy
@@ -821,8 +822,8 @@ commands:
         configs/tok2vec.cfg
         --nlp.lang ${vars.lang}
         --vars.model-type crf
-        --vars.project-name "static_vectors-crf"
-        --vars.run-name "1"
+        --vars.project-name ${vars.project_name}
+        --vars.run-name "static_vectors-crf-1"
         --vars.include-static-vectors true
         --output training/static_vectors-crf/1/
         --paths.train corpus/train.spacy
@@ -835,8 +836,8 @@ commands:
         configs/tok2vec.cfg
         --nlp.lang ${vars.lang}
         --vars.model-type crf
-        --vars.project-name "static_vectors-crf"
-        --vars.run-name "2"
+        --vars.project-name ${vars.project_name}
+        --vars.run-name "static_vectors-crf-2"
         --vars.include-static-vectors true
         --output training/static_vectors-crf/2
         --paths.train corpus/train.spacy
@@ -849,8 +850,8 @@ commands:
         configs/tok2vec.cfg
         --nlp.lang ${vars.lang}
         --vars.model-type crf
-        --vars.project-name "static_vectors-crf"
-        --vars.run-name "3"
+        --vars.project-name ${vars.project_name}
+        --vars.run-name "static_vectors-crf-3"
         --vars.include-static-vectors true
         --output training/static_vectors-crf/3
         --paths.train corpus/train.spacy
@@ -931,8 +932,8 @@ commands:
         configs/trf.cfg
         --nlp.lang ${vars.lang}
         --vars.model-type bilstm-crf
-        --vars.project-name "roberta_tagalog-bilstm-crf"
-        --vars.run-name "1"
+        --vars.project-name ${vars.project_name} 
+        --vars.run-name "roberta_tagalog-bilstm-crf-1"
         --components.transformer.model.name jcblaise/roberta-tagalog-base
         --output training/roberta_tagalog-bilstm-crf/1/
         --paths.train corpus/train.spacy
@@ -944,8 +945,8 @@ commands:
         configs/trf.cfg
         --nlp.lang ${vars.lang}
         --vars.model-type bilstm-crf
-        --vars.project-name "roberta_tagalog-bilstm-crf"
-        --vars.run-name "2"
+        --vars.project-name ${vars.project_name}
+        --vars.run-name "roberta_tagalog-bilstm-crf-2"
         --components.transformer.model.name jcblaise/roberta-tagalog-base
         --output training/roberta_tagalog-bilstm-crf/2/
         --paths.train corpus/train.spacy
@@ -957,8 +958,8 @@ commands:
         configs/trf.cfg
         --nlp.lang ${vars.lang}
         --vars.model-type bilstm-crf
-        --vars.project-name "roberta_tagalog-bilstm-crf"
-        --vars.run-name "3"
+        --vars.project-name ${vars.project_name}
+        --vars.run-name "roberta_tagalog-bilstm-crf-3"
         --components.transformer.model.name jcblaise/roberta-tagalog-base
         --output training/roberta_tagalog-bilstm-crf/3/
         --paths.train corpus/train.spacy
@@ -1038,8 +1039,8 @@ commands:
         configs/trf.cfg
         --nlp.lang ${vars.lang}
         --vars.model-type bilstm
-        --vars.project-name "roberta_tagalog-bilstm-crf"
-        --vars.run-name "1"
+        --vars.project-name ${vars.project_name}
+        --vars.run-name "roberta_tagalog-bilstm-1"
         --components.transformer.model.name jcblaise/roberta-tagalog-base
         --output training/roberta_tagalog-bilstm/1/
         --paths.train corpus/train.spacy
@@ -1051,8 +1052,8 @@ commands:
         configs/trf.cfg
         --nlp.lang ${vars.lang}
         --vars.model-type bilstm
-        --vars.project-name "roberta_tagalog-bilstm-crf"
-        --vars.run-name "2"
+        --vars.project-name ${vars.project_name}
+        --vars.run-name "roberta_tagalog-bilstm-2"
         --components.transformer.model.name jcblaise/roberta-tagalog-base
         --output training/roberta_tagalog-bilstm/2/
         --paths.train corpus/train.spacy
@@ -1064,8 +1065,8 @@ commands:
         configs/trf.cfg
         --nlp.lang ${vars.lang}
         --vars.model-type bilstm
-        --vars.project-name "roberta_tagalog-bilstm-crf"
-        --vars.run-name "3"
+        --vars.project-name ${vars.project_name}
+        --vars.run-name "roberta_tagalog-bilstm-3"
         --components.transformer.model.name jcblaise/roberta-tagalog-base
         --output training/roberta_tagalog-bilstm/3/
         --paths.train corpus/train.spacy
@@ -1145,8 +1146,8 @@ commands:
         configs/trf.cfg
         --nlp.lang ${vars.lang}
         --vars.model-type crf
-        --vars.project-name "roberta_tagalog-crf"
-        --vars.run-name "1"
+        --vars.project-name ${vars.project_name}
+        --vars.run-name "roberta_tagalog-crf-1"
         --components.transformer.model.name jcblaise/roberta-tagalog-base
         --output training/roberta_tagalog-crf/1/
         --paths.train corpus/train.spacy
@@ -1158,8 +1159,8 @@ commands:
         configs/trf.cfg
         --nlp.lang ${vars.lang}
         --vars.model-type crf
-        --vars.project-name "roberta_tagalog-crf"
-        --vars.run-name "2"
+        --vars.project-name ${vars.project_name}
+        --vars.run-name "roberta_tagalog-crf-2"
         --components.transformer.model.name jcblaise/roberta-tagalog-base
         --output training/roberta_tagalog-crf/2/
         --paths.train corpus/train.spacy
@@ -1171,8 +1172,8 @@ commands:
         configs/trf.cfg
         --nlp.lang ${vars.lang}
         --vars.model-type crf
-        --vars.project-name "roberta_tagalog-crf"
-        --vars.run-name "3"
+        --vars.project-name ${vars.project_name}
+        --vars.run-name "roberta_tagalog-crf-3"
         --components.transformer.model.name jcblaise/roberta-tagalog-base
         --output training/roberta_tagalog-crf/3/
         --paths.train corpus/train.spacy
@@ -1252,8 +1253,8 @@ commands:
         configs/trf.cfg
         --nlp.lang ${vars.lang}
         --vars.model-type bilstm-crf
-        --vars.project-name "xlm_roberta-bilstm-crf"
-        --vars.run-name "1"
+        --vars.project-name ${vars.project_name}
+        --vars.run-name "xlm_roberta-bilstm-crf-1"
         --components.transformer.model.name xlm-roberta-base
         --output training/xlm_roberta-bilstm-crf/1/
         --paths.train corpus/train.spacy
@@ -1265,8 +1266,8 @@ commands:
         configs/trf.cfg
         --nlp.lang ${vars.lang}
         --vars.model-type bilstm-crf
-        --vars.project-name "xlm_roberta-bilstm-crf"
-        --vars.run-name "2"
+        --vars.project-name ${vars.project_name}
+        --vars.run-name "xlm_roberta-bilstm-crf-2"
         --components.transformer.model.name xlm-roberta-base
         --output training/xlm_roberta-bilstm-crf/2/
         --paths.train corpus/train.spacy
@@ -1278,8 +1279,8 @@ commands:
         configs/trf.cfg
         --nlp.lang ${vars.lang}
         --vars.model-type bilstm-crf
-        --vars.project-name "xlm_roberta-bilstm-crf"
-        --vars.run-name "3"
+        --vars.project-name ${vars.project_name}
+        --vars.run-name "xlm_roberta-bilstm-crf-3"
         --components.transformer.model.name xlm-roberta-base
         --output training/xlm_roberta-bilstm-crf/3/
         --paths.train corpus/train.spacy
@@ -1331,8 +1332,8 @@ commands:
         configs/trf.cfg
         --nlp.lang ${vars.lang}
         --vars.model-type bilstm
-        --vars.project-name "xlm_roberta-bilstm"
-        --vars.run-name "1"
+        --vars.project-name ${vars.project_name}
+        --vars.run-name "xlm_roberta-bilstm-1"
         --components.transformer.model.name xlm-roberta-base
         --output training/xlm_roberta-bilstm/1/
         --paths.train corpus/train.spacy
@@ -1344,8 +1345,8 @@ commands:
         configs/trf.cfg
         --nlp.lang ${vars.lang}
         --vars.model-type bilstm
-        --vars.project-name "xlm_roberta-bilstm"
-        --vars.run-name "2"
+        --vars.project-name ${vars.project_name}
+        --vars.run-name "xlm_roberta-bilstm-2"
         --components.transformer.model.name xlm-roberta-base
         --output training/xlm_roberta-bilstm/2/
         --paths.train corpus/train.spacy
@@ -1357,8 +1358,8 @@ commands:
         configs/trf.cfg
         --nlp.lang ${vars.lang}
         --vars.model-type bilstm
-        --vars.project-name "xlm_roberta-bilstm"
-        --vars.run-name "3"
+        --vars.project-name ${vars.project_name}
+        --vars.run-name "xlm_roberta-bilstm-3"
         --components.transformer.model.name xlm-roberta-base
         --output training/xlm_roberta-bilstm/3/
         --paths.train corpus/train.spacy
@@ -1438,8 +1439,8 @@ commands:
         configs/trf.cfg
         --nlp.lang ${vars.lang}
         --vars.model-type crf
-        --vars.project-name "xlm_roberta-crf"
-        --vars.run-name "1"
+        --vars.project-name ${vars.project_name}
+        --vars.run-name "xlm_roberta-crf-1"
         --components.transformer.model.name xlm-roberta-base
         --output training/xlm_roberta-crf/1/
         --paths.train corpus/train.spacy
@@ -1451,8 +1452,8 @@ commands:
         configs/trf.cfg
         --nlp.lang ${vars.lang}
         --vars.model-type crf
-        --vars.project-name "xlm_roberta-crf"
-        --vars.run-name "2"
+        --vars.project-name ${vars.project_name}
+        --vars.run-name "xlm_roberta-crf-2"
         --components.transformer.model.name xlm-roberta-base
         --output training/xlm_roberta-crf/2/
         --paths.train corpus/train.spacy
@@ -1464,8 +1465,8 @@ commands:
         configs/trf.cfg
         --nlp.lang ${vars.lang}
         --vars.model-type crf
-        --vars.project-name "xlm_roberta-crf"
-        --vars.run-name "3"
+        --vars.project-name ${vars.project_name}
+        --vars.run-name "xlm_roberta-crf-3"
         --components.transformer.model.name xlm-roberta-base
         --output training/xlm_roberta-crf/3/
         --paths.train corpus/train.spacy
@@ -1545,8 +1546,8 @@ commands:
         configs/trf.cfg
         --nlp.lang ${vars.lang}
         --vars.model-type bilstm-crf
-        --vars.project-name "mbert-bilstm-crf"
-        --vars.run-name "1"
+        --vars.project-name ${vars.project_name}
+        --vars.run-name "mbert-bilstm-crf-1"
         --components.transformer.model.name bert-base-multilingual-cased
         --output training/mbert-bilstm-crf/1/
         --paths.train corpus/train.spacy
@@ -1558,8 +1559,8 @@ commands:
         configs/trf.cfg
         --nlp.lang ${vars.lang}
         --vars.model-type bilstm-crf
-        --vars.project-name "mbert-bilstm-crf"
-        --vars.run-name "2"
+        --vars.project-name ${vars.project_name}
+        --vars.run-name "mbert-bilstm-crf-2"
         --components.transformer.model.name bert-base-multilingual-cased
         --output training/mbert-bilstm-crf/2/
         --paths.train corpus/train.spacy
@@ -1571,8 +1572,8 @@ commands:
         configs/trf.cfg
         --nlp.lang ${vars.lang}
         --vars.model-type bilstm-crf
-        --vars.project-name "mbert-bilstm-crf"
-        --vars.run-name "3"
+        --vars.project-name ${vars.project_name}
+        --vars.run-name "mbert-bilstm-crf-3"
         --components.transformer.model.name bert-base-multilingual-cased
         --output training/mbert-bilstm-crf/3/
         --paths.train corpus/train.spacy
@@ -1652,8 +1653,8 @@ commands:
         configs/trf.cfg
         --nlp.lang ${vars.lang}
         --vars.model-type bilstm
-        --vars.project-name "mbert-bilstm"
-        --vars.run-name "1"
+        --vars.project-name ${vars.project_name}
+        --vars.run-name "mbert-bilstm-1"
         --components.transformer.model.name bert-base-multilingual-cased
         --output training/mbert-bilstm/1/
         --paths.train corpus/train.spacy
@@ -1665,8 +1666,8 @@ commands:
         configs/trf.cfg
         --nlp.lang ${vars.lang}
         --vars.model-type bilstm
-        --vars.project-name "mbert-bilstm"
-        --vars.run-name "2"
+        --vars.project-name ${vars.project_name}
+        --vars.run-name "mbert-bilstm-2"
         --components.transformer.model.name bert-base-multilingual-cased
         --output training/mbert-bilstm/2/
         --paths.train corpus/train.spacy
@@ -1678,8 +1679,8 @@ commands:
         configs/trf.cfg
         --nlp.lang ${vars.lang}
         --vars.model-type bilstm
-        --vars.project-name "mbert-bilstm"
-        --vars.run-name "3"
+        --vars.project-name ${vars.project_name}
+        --vars.run-name "mbert-bilstm-3"
         --components.transformer.model.name bert-base-multilingual-cased
         --output training/mbert-bilstm/3/
         --paths.train corpus/train.spacy
@@ -1759,8 +1760,8 @@ commands:
         configs/trf.cfg
         --nlp.lang ${vars.lang}
         --vars.model-type bilstm-crf
-        --vars.project-name "mbert-crf"
-        --vars.run-name "1"
+        --vars.project-name ${vars.project_name}
+        --vars.run-name "mbert-crf-1"
         --components.transformer.model.name bert-base-multilingual-cased
         --output training/mbert-bilstm-crf/1/
         --paths.train corpus/train.spacy
@@ -1772,8 +1773,8 @@ commands:
         configs/trf.cfg
         --nlp.lang ${vars.lang}
         --vars.model-type bilstm-crf
-        --vars.project-name "mbert-crf"
-        --vars.run-name "2"
+        --vars.project-name ${vars.project_name}
+        --vars.run-name "mbert-crf-2"
         --components.transformer.model.name bert-base-multilingual-cased
         --output training/mbert-bilstm-crf/2/
         --paths.train corpus/train.spacy
@@ -1785,8 +1786,8 @@ commands:
         configs/trf.cfg
         --nlp.lang ${vars.lang}
         --vars.model-type bilstm-crf
-        --vars.project-name "mbert-crf"
-        --vars.run-name "3"
+        --vars.project-name ${vars.project_name}
+        --vars.run-name "mbert-crf-3"
         --components.transformer.model.name bert-base-multilingual-cased
         --output training/mbert-bilstm-crf/3/
         --paths.train corpus/train.spacy
