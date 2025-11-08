@@ -705,8 +705,8 @@ commands:
       - python -c "import os; os.makedirs('training/static_vectors-bilstm/1/', exist_ok=True)"
       - python -c "import os; os.makedirs('training/static_vectors-bilstm/2/', exist_ok=True)"
       - python -c "import os; os.makedirs('training/static_vectors-bilstm/3/', exist_ok=True)"
-      - python -c "import os; os.makedirs(' metrics/static_vectors-bilstm-dev/', exist_ok=True)"
-      - python -c "import os; os.makedirs(' metrics/static_vectors-bilstm-test/', exist_ok=True)"
+      - python -c "import os; os.makedirs('metrics/static_vectors-bilstm-dev/', exist_ok=True)"
+      - python -c "import os; os.makedirs('metrics/static_vectors-bilstm-test/', exist_ok=True)"
       - >-
         python -m spacy train
         configs/tok2vec.cfg
