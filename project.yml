@@ -936,8 +936,8 @@ commands:
         --vars.run-name "roberta_tagalog-bilstm-crf-1"
         --components.transformer.model.name jcblaise/roberta-tagalog-base
         --output training/roberta_tagalog-bilstm-crf/1/
-        --paths.train corpus/train.spacy
-        --paths.dev corpus/dev.spacy
+        --paths.train /dev/shm/train.spacy
+        --paths.dev /dev/shm/dev.spacy
         --gpu-id ${vars.gpu_id}
         --code transformer_components.py
       - >-
