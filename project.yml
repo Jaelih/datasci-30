@@ -927,19 +927,19 @@ commands:
       - python -c "import os; os.makedirs('training/roberta_tagalog-bilstm-crf/3/', exist_ok=True)"
       - python -c "import os; os.makedirs('metrics/roberta_tagalog-bilstm-crf-dev/', exist_ok=True)"
       - python -c "import os; os.makedirs('metrics/roberta_tagalog-bilstm-crf-test/', exist_ok=True)"
-      - >-
-        python -m spacy train
-        configs/trf.cfg
-        --nlp.lang ${vars.lang}
-        --vars.model-type bilstm-crf
-        --vars.project-name ${vars.project_name} 
-        --vars.run-name "roberta_tagalog-bilstm-crf-1"
-        --components.transformer.model.name jcblaise/roberta-tagalog-base
-        --output training/roberta_tagalog-bilstm-crf/1/
-        --paths.train corpus/train.spacy
-        --paths.dev corpus/dev.spacy
-        --gpu-id ${vars.gpu_id}
-        --code transformer_components.py
+      # - >-
+      #   python -m spacy train
+      #   configs/trf.cfg
+      #   --nlp.lang ${vars.lang}
+      #   --vars.model-type bilstm-crf
+      #   --vars.project-name ${vars.project_name} 
+      #   --vars.run-name "roberta_tagalog-bilstm-crf-1"
+      #   --components.transformer.model.name jcblaise/roberta-tagalog-base
+      #   --output training/roberta_tagalog-bilstm-crf/1/
+      #   --paths.train corpus/train.spacy
+      #   --paths.dev corpus/dev.spacy
+      #   --gpu-id ${vars.gpu_id}
+      #   --code transformer_components.py
       - >-
         python -m spacy train
         configs/trf.cfg
