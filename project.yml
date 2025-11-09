@@ -125,8 +125,8 @@ commands:
         configs/default.cfg
         --nlp.lang ${vars.lang}
         --output training/baseline/
-        --paths.train corpus/train.spacy
-        --paths.dev corpus/dev.spacy
+        --paths.train /dev/shm/train.spacy
+        --paths.dev /dev/shm/dev.spacy
         --gpu-id ${vars.gpu_id}
         --code standalone_ner_pipeline.py
       - >-
@@ -203,8 +203,8 @@ commands:
         configs/transformer.cfg
         --nlp.lang ${vars.lang}
         --output training/xlm-roberta/
-        --paths.train corpus/train.spacy
-        --paths.dev corpus/dev.spacy
+        --paths.train /dev/shm/train.spacy
+        --paths.dev /dev/shm/dev.spacy
         --components.transformer.model.name xlm-roberta-base
         --gpu-id ${vars.gpu_id}
       - python -c "import os; os.makedirs('training/mbert', exist_ok=True)"
@@ -213,8 +213,8 @@ commands:
         configs/transformer.cfg
         --nlp.lang ${vars.lang}
         --output training/mbert/
-        --paths.train corpus/train.spacy
-        --paths.dev corpus/dev.spacy
+        --paths.train /dev/shm/train.spacy
+        --paths.dev /dev/shm/dev.spacy
         --components.transformer.model.name ```bert-base-multilingual-uncased```
         --gpu-id ${vars.gpu_id}
       - >-
@@ -299,8 +299,8 @@ commands:
         --vars.run-name "baseline-bilstm-crf-1"
         --vars.include-static-vectors false
         --output training/baseline-bilstm-crf/1/
-        --paths.train corpus/train.spacy
-        --paths.dev corpus/dev.spacy
+        --paths.train /dev/shm/train.spacy
+        --paths.dev /dev/shm/dev.spacy
         --gpu-id ${vars.gpu_id}
         --code tok2vec_pipeline.py
       - >-
@@ -312,8 +312,8 @@ commands:
         --vars.run-name "baseline-bilstm-crf-2"
         --vars.include-static-vectors false
         --output training/baseline-bilstm-crf/2
-        --paths.train corpus/train.spacy
-        --paths.dev corpus/dev.spacy
+        --paths.train /dev/shm/train.spacy
+        --paths.dev /dev/shm/dev.spacy
         --gpu-id ${vars.gpu_id}
         --code tok2vec_pipeline.py
       - >-
@@ -325,8 +325,8 @@ commands:
         --vars.run-name "baseline-bilstm-crf-3"
         --vars.include-static-vectors false
         --output training/baseline-bilstm-crf/3
-        --paths.train corpus/train.spacy
-        --paths.dev corpus/dev.spacy
+        --paths.train /dev/shm/train.spacy
+        --paths.dev /dev/shm/dev.spacy
         --gpu-id ${vars.gpu_id}
         --code tok2vec_pipeline.py
       - >-
@@ -406,8 +406,8 @@ commands:
         --vars.run-name "baseline-bilstm-1"
         --vars.include-static-vectors false
         --output training/baseline-bilstm/1/
-        --paths.train corpus/train.spacy
-        --paths.dev corpus/dev.spacy
+        --paths.train /dev/shm/train.spacy
+        --paths.dev /dev/shm/dev.spacy
         --gpu-id ${vars.gpu_id}
         --code tok2vec_pipeline.py
       - >-
@@ -419,8 +419,8 @@ commands:
         --vars.run-name "baseline-bilstm-2"
         --vars.include-static-vectors false
         --output training/baseline-bilstm/2
-        --paths.train corpus/train.spacy
-        --paths.dev corpus/dev.spacy
+        --paths.train /dev/shm/train.spacy
+        --paths.dev /dev/shm/dev.spacy
         --gpu-id ${vars.gpu_id}
         --code tok2vec_pipeline.py
       - >-
@@ -432,8 +432,8 @@ commands:
         --vars.run-name "baseline-bilstm-3"
         --vars.include-static-vectors false
         --output training/baseline-bilstm/3
-        --paths.train corpus/train.spacy
-        --paths.dev corpus/dev.spacy
+        --paths.train /dev/shm/train.spacy
+        --paths.dev /dev/shm/dev.spacy
         --gpu-id ${vars.gpu_id}
         --code tok2vec_pipeline.py
       - >-
@@ -513,8 +513,8 @@ commands:
         --vars.run-name "baseline-crf-1"
         --vars.include-static-vectors false
         --output training/baseline-crf/1/
-        --paths.train corpus/train.spacy
-        --paths.dev corpus/dev.spacy
+        --paths.train /dev/shm/train.spacy
+        --paths.dev /dev/shm/dev.spacy
         --gpu-id ${vars.gpu_id}
         --code tok2vec_pipeline.py
       - >-
@@ -526,8 +526,8 @@ commands:
         --vars.run-name "baseline-crf-2"
         --vars.include-static-vectors false
         --output training/baseline-crf/2
-        --paths.train corpus/train.spacy
-        --paths.dev corpus/dev.spacy
+        --paths.train /dev/shm/train.spacy
+        --paths.dev /dev/shm/dev.spacy
         --gpu-id ${vars.gpu_id}
         --code tok2vec_pipeline.py
       - >-
@@ -539,8 +539,8 @@ commands:
         --vars.run-name "baseline-crf-3"
         --vars.include-static-vectors false
         --output training/baseline-crf/3
-        --paths.train corpus/train.spacy
-        --paths.dev corpus/dev.spacy
+        --paths.train /dev/shm/train.spacy
+        --paths.dev /dev/shm/dev.spacy
         --gpu-id ${vars.gpu_id}
         --code tok2vec_pipeline.py
       - >-
@@ -606,8 +606,8 @@ commands:
         --vars.run-name "static_vectors-bilstm-crf-1"
         --vars.include-static-vectors true
         --output training/static_vectors-bilstm-crf/1/
-        --paths.train corpus/train.spacy
-        --paths.dev corpus/dev.spacy
+        --paths.train /dev/shm/train.spacy
+        --paths.dev /dev/shm/dev.spacy
         --gpu-id ${vars.gpu_id}
         --paths.vectors ${vars.vectors}
         --code tok2vec_pipeline.py
@@ -620,8 +620,8 @@ commands:
         --vars.run-name "static_vectors-bilstm-crf-2"
         --vars.include-static-vectors true
         --output training/static_vectors-bilstm-crf/2
-        --paths.train corpus/train.spacy
-        --paths.dev corpus/dev.spacy
+        --paths.train /dev/shm/train.spacy
+        --paths.dev /dev/shm/dev.spacy
         --gpu-id ${vars.gpu_id}
         --paths.vectors ${vars.vectors}
         --code tok2vec_pipeline.py
@@ -634,8 +634,8 @@ commands:
         --vars.run-name "static_vectors-bilstm-crf-3"
         --vars.include-static-vectors true
         --output training/static_vectors-bilstm-crf/3
-        --paths.train corpus/train.spacy
-        --paths.dev corpus/dev.spacy
+        --paths.train /dev/shm/train.spacy
+        --paths.dev /dev/shm/dev.spacy
         --gpu-id ${vars.gpu_id}
         --paths.vectors ${vars.vectors}
         --code tok2vec_pipeline.py
@@ -716,8 +716,8 @@ commands:
         --vars.run-name "static_vectors-bilstm-1"
         --vars.include-static-vectors true
         --output training/static_vectors-bilstm/1/
-        --paths.train corpus/train.spacy
-        --paths.dev corpus/dev.spacy
+        --paths.train /dev/shm/train.spacy
+        --paths.dev /dev/shm/dev.spacy
         --gpu-id ${vars.gpu_id}
         --paths.vectors ${vars.vectors}
         --code tok2vec_pipeline.py
@@ -730,8 +730,8 @@ commands:
         --vars.run-name "static_vectors-bilstm-2"
         --vars.include-static-vectors true
         --output training/static_vectors-bilstm/2
-        --paths.train corpus/train.spacy
-        --paths.dev corpus/dev.spacy
+        --paths.train /dev/shm/train.spacy
+        --paths.dev /dev/shm/dev.spacy
         --gpu-id ${vars.gpu_id}
         --paths.vectors ${vars.vectors}
         --code tok2vec_pipeline.py
@@ -744,8 +744,8 @@ commands:
         --vars.run-name "static_vectors-bilstm-3"
         --vars.include-static-vectors true
         --output training/static_vectors-bilstm/3
-        --paths.train corpus/train.spacy
-        --paths.dev corpus/dev.spacy
+        --paths.train /dev/shm/train.spacy
+        --paths.dev /dev/shm/dev.spacy
         --gpu-id ${vars.gpu_id}
         --paths.vectors ${vars.vectors}
         --code tok2vec_pipeline.py
@@ -826,8 +826,8 @@ commands:
         --vars.run-name "static_vectors-crf-1"
         --vars.include-static-vectors true
         --output training/static_vectors-crf/1/
-        --paths.train corpus/train.spacy
-        --paths.dev corpus/dev.spacy
+        --paths.train /dev/shm/train.spacy
+        --paths.dev /dev/shm/dev.spacy
         --gpu-id ${vars.gpu_id}
         --paths.vectors ${vars.vectors}
         --code tok2vec_pipeline.py
@@ -840,8 +840,8 @@ commands:
         --vars.run-name "static_vectors-crf-2"
         --vars.include-static-vectors true
         --output training/static_vectors-crf/2
-        --paths.train corpus/train.spacy
-        --paths.dev corpus/dev.spacy
+        --paths.train /dev/shm/train.spacy
+        --paths.dev /dev/shm/dev.spacy
         --gpu-id ${vars.gpu_id}
         --paths.vectors ${vars.vectors}
         --code tok2vec_pipeline.py
@@ -854,8 +854,8 @@ commands:
         --vars.run-name "static_vectors-crf-3"
         --vars.include-static-vectors true
         --output training/static_vectors-crf/3
-        --paths.train corpus/train.spacy
-        --paths.dev corpus/dev.spacy
+        --paths.train /dev/shm/train.spacy
+        --paths.dev /dev/shm/dev.spacy
         --gpu-id ${vars.gpu_id}
         --paths.vectors ${vars.vectors}
         --code tok2vec_pipeline.py
@@ -949,8 +949,8 @@ commands:
         --vars.run-name "roberta_tagalog-bilstm-crf-2"
         --components.transformer.model.name jcblaise/roberta-tagalog-base
         --output training/roberta_tagalog-bilstm-crf/2/
-        --paths.train corpus/train.spacy
-        --paths.dev corpus/dev.spacy
+        --paths.train /dev/shm/train.spacy
+        --paths.dev /dev/shm/dev.spacy
         --gpu-id ${vars.gpu_id}
         --code transformer_components.py
       - >-
@@ -962,8 +962,8 @@ commands:
         --vars.run-name "roberta_tagalog-bilstm-crf-3"
         --components.transformer.model.name jcblaise/roberta-tagalog-base
         --output training/roberta_tagalog-bilstm-crf/3/
-        --paths.train corpus/train.spacy
-        --paths.dev corpus/dev.spacy
+        --paths.train /dev/shm/train.spacy
+        --paths.dev /dev/shm/dev.spacy
         --gpu-id ${vars.gpu_id}
         --code transformer_components.py
       - >-
@@ -1043,8 +1043,8 @@ commands:
         --vars.run-name "roberta_tagalog-bilstm-1"
         --components.transformer.model.name jcblaise/roberta-tagalog-base
         --output training/roberta_tagalog-bilstm/1/
-        --paths.train corpus/train.spacy
-        --paths.dev corpus/dev.spacy
+        --paths.train /dev/shm/train.spacy
+        --paths.dev /dev/shm/dev.spacy
         --gpu-id ${vars.gpu_id}
         --code transformer_components.py
       - >-
@@ -1056,8 +1056,8 @@ commands:
         --vars.run-name "roberta_tagalog-bilstm-2"
         --components.transformer.model.name jcblaise/roberta-tagalog-base
         --output training/roberta_tagalog-bilstm/2/
-        --paths.train corpus/train.spacy
-        --paths.dev corpus/dev.spacy
+        --paths.train /dev/shm/train.spacy
+        --paths.dev /dev/shm/dev.spacy
         --gpu-id ${vars.gpu_id}
         --code transformer_components.py
       - >-
@@ -1069,8 +1069,8 @@ commands:
         --vars.run-name "roberta_tagalog-bilstm-3"
         --components.transformer.model.name jcblaise/roberta-tagalog-base
         --output training/roberta_tagalog-bilstm/3/
-        --paths.train corpus/train.spacy
-        --paths.dev corpus/dev.spacy
+        --paths.train /dev/shm/train.spacy
+        --paths.dev /dev/shm/dev.spacy
         --gpu-id ${vars.gpu_id}
         --code transformer_components.py
       - >-
@@ -1150,8 +1150,8 @@ commands:
         --vars.run-name "roberta_tagalog-crf-1"
         --components.transformer.model.name jcblaise/roberta-tagalog-base
         --output training/roberta_tagalog-crf/1/
-        --paths.train corpus/train.spacy
-        --paths.dev corpus/dev.spacy
+        --paths.train /dev/shm/train.spacy
+        --paths.dev /dev/shm/dev.spacy
         --gpu-id ${vars.gpu_id}
         --code transformer_components.py
       - >-
@@ -1163,8 +1163,8 @@ commands:
         --vars.run-name "roberta_tagalog-crf-2"
         --components.transformer.model.name jcblaise/roberta-tagalog-base
         --output training/roberta_tagalog-crf/2/
-        --paths.train corpus/train.spacy
-        --paths.dev corpus/dev.spacy
+        --paths.train /dev/shm/train.spacy
+        --paths.dev /dev/shm/dev.spacy
         --gpu-id ${vars.gpu_id}
         --code transformer_components.py
       - >-
@@ -1176,8 +1176,8 @@ commands:
         --vars.run-name "roberta_tagalog-crf-3"
         --components.transformer.model.name jcblaise/roberta-tagalog-base
         --output training/roberta_tagalog-crf/3/
-        --paths.train corpus/train.spacy
-        --paths.dev corpus/dev.spacy
+        --paths.train /dev/shm/train.spacy
+        --paths.dev /dev/shm/dev.spacy
         --gpu-id ${vars.gpu_id}
         --code transformer_components.py
       - >-
@@ -1257,8 +1257,8 @@ commands:
         --vars.run-name "xlm_roberta-bilstm-crf-1"
         --components.transformer.model.name xlm-roberta-base
         --output training/xlm_roberta-bilstm-crf/1/
-        --paths.train corpus/train.spacy
-        --paths.dev corpus/dev.spacy
+        --paths.train /dev/shm/train.spacy
+        --paths.dev /dev/shm/dev.spacy
         --gpu-id ${vars.gpu_id}
         --code transformer_components.py
       - >-
@@ -1270,8 +1270,8 @@ commands:
         --vars.run-name "xlm_roberta-bilstm-crf-2"
         --components.transformer.model.name xlm-roberta-base
         --output training/xlm_roberta-bilstm-crf/2/
-        --paths.train corpus/train.spacy
-        --paths.dev corpus/dev.spacy
+        --paths.train /dev/shm/train.spacy
+        --paths.dev /dev/shm/dev.spacy
         --gpu-id ${vars.gpu_id}
         --code transformer_components.py
       - >-
@@ -1283,8 +1283,8 @@ commands:
         --vars.run-name "xlm_roberta-bilstm-crf-3"
         --components.transformer.model.name xlm-roberta-base
         --output training/xlm_roberta-bilstm-crf/3/
-        --paths.train corpus/train.spacy
-        --paths.dev corpus/dev.spacy
+        --paths.train /dev/shm/train.spacy
+        --paths.dev /dev/shm/dev.spacy
         --gpu-id ${vars.gpu_id}
         --code transformer_components.py
       - >-
@@ -1336,8 +1336,8 @@ commands:
         --vars.run-name "xlm_roberta-bilstm-1"
         --components.transformer.model.name xlm-roberta-base
         --output training/xlm_roberta-bilstm/1/
-        --paths.train corpus/train.spacy
-        --paths.dev corpus/dev.spacy
+        --paths.train /dev/shm/train.spacy
+        --paths.dev /dev/shm/dev.spacy
         --gpu-id ${vars.gpu_id}
         --code transformer_components.py
       - >-
@@ -1349,8 +1349,8 @@ commands:
         --vars.run-name "xlm_roberta-bilstm-2"
         --components.transformer.model.name xlm-roberta-base
         --output training/xlm_roberta-bilstm/2/
-        --paths.train corpus/train.spacy
-        --paths.dev corpus/dev.spacy
+        --paths.train /dev/shm/train.spacy
+        --paths.dev /dev/shm/dev.spacy
         --gpu-id ${vars.gpu_id}
         --code transformer_components.py
       - >-
@@ -1362,8 +1362,8 @@ commands:
         --vars.run-name "xlm_roberta-bilstm-3"
         --components.transformer.model.name xlm-roberta-base
         --output training/xlm_roberta-bilstm/3/
-        --paths.train corpus/train.spacy
-        --paths.dev corpus/dev.spacy
+        --paths.train /dev/shm/train.spacy
+        --paths.dev /dev/shm/dev.spacy
         --gpu-id ${vars.gpu_id}
         --code transformer_components.py
       - >-
@@ -1443,8 +1443,8 @@ commands:
         --vars.run-name "xlm_roberta-crf-1"
         --components.transformer.model.name xlm-roberta-base
         --output training/xlm_roberta-crf/1/
-        --paths.train corpus/train.spacy
-        --paths.dev corpus/dev.spacy
+        --paths.train /dev/shm/train.spacy
+        --paths.dev /dev/shm/dev.spacy
         --gpu-id ${vars.gpu_id}
         --code transformer_components.py
       - >-
@@ -1456,8 +1456,8 @@ commands:
         --vars.run-name "xlm_roberta-crf-2"
         --components.transformer.model.name xlm-roberta-base
         --output training/xlm_roberta-crf/2/
-        --paths.train corpus/train.spacy
-        --paths.dev corpus/dev.spacy
+        --paths.train /dev/shm/train.spacy
+        --paths.dev /dev/shm/dev.spacy
         --gpu-id ${vars.gpu_id}
         --code transformer_components.py
       - >-
@@ -1469,8 +1469,8 @@ commands:
         --vars.run-name "xlm_roberta-crf-3"
         --components.transformer.model.name xlm-roberta-base
         --output training/xlm_roberta-crf/3/
-        --paths.train corpus/train.spacy
-        --paths.dev corpus/dev.spacy
+        --paths.train /dev/shm/train.spacy
+        --paths.dev /dev/shm/dev.spacy
         --gpu-id ${vars.gpu_id}
         --code transformer_components.py
       - >-
@@ -1550,8 +1550,8 @@ commands:
         --vars.run-name "mbert-bilstm-crf-1"
         --components.transformer.model.name bert-base-multilingual-cased
         --output training/mbert-bilstm-crf/1/
-        --paths.train corpus/train.spacy
-        --paths.dev corpus/dev.spacy
+        --paths.train /dev/shm/train.spacy
+        --paths.dev /dev/shm/dev.spacy
         --gpu-id ${vars.gpu_id}
         --code transformer_components.py
       - >-
@@ -1563,8 +1563,8 @@ commands:
         --vars.run-name "mbert-bilstm-crf-2"
         --components.transformer.model.name bert-base-multilingual-cased
         --output training/mbert-bilstm-crf/2/
-        --paths.train corpus/train.spacy
-        --paths.dev corpus/dev.spacy
+        --paths.train /dev/shm/train.spacy
+        --paths.dev /dev/shm/dev.spacy
         --gpu-id ${vars.gpu_id}
         --code transformer_components.py
       - >-
@@ -1576,8 +1576,8 @@ commands:
         --vars.run-name "mbert-bilstm-crf-3"
         --components.transformer.model.name bert-base-multilingual-cased
         --output training/mbert-bilstm-crf/3/
-        --paths.train corpus/train.spacy
-        --paths.dev corpus/dev.spacy
+        --paths.train /dev/shm/train.spacy
+        --paths.dev /dev/shm/dev.spacy
         --gpu-id ${vars.gpu_id}
         --code transformer_components.py
       - >-
@@ -1657,8 +1657,8 @@ commands:
         --vars.run-name "mbert-bilstm-1"
         --components.transformer.model.name bert-base-multilingual-cased
         --output training/mbert-bilstm/1/
-        --paths.train corpus/train.spacy
-        --paths.dev corpus/dev.spacy
+        --paths.train /dev/shm/train.spacy
+        --paths.dev /dev/shm/dev.spacy
         --gpu-id ${vars.gpu_id}
         --code transformer_components.py
       - >-
@@ -1670,8 +1670,8 @@ commands:
         --vars.run-name "mbert-bilstm-2"
         --components.transformer.model.name bert-base-multilingual-cased
         --output training/mbert-bilstm/2/
-        --paths.train corpus/train.spacy
-        --paths.dev corpus/dev.spacy
+        --paths.train /dev/shm/train.spacy
+        --paths.dev /dev/shm/dev.spacy
         --gpu-id ${vars.gpu_id}
         --code transformer_components.py
       - >-
@@ -1683,8 +1683,8 @@ commands:
         --vars.run-name "mbert-bilstm-3"
         --components.transformer.model.name bert-base-multilingual-cased
         --output training/mbert-bilstm/3/
-        --paths.train corpus/train.spacy
-        --paths.dev corpus/dev.spacy
+        --paths.train /dev/shm/train.spacy
+        --paths.dev /dev/shm/dev.spacy
         --gpu-id ${vars.gpu_id}
         --code transformer_components.py
       - >-
@@ -1764,8 +1764,8 @@ commands:
         --vars.run-name "mbert-crf-1"
         --components.transformer.model.name bert-base-multilingual-cased
         --output training/mbert-bilstm-crf/1/
-        --paths.train corpus/train.spacy
-        --paths.dev corpus/dev.spacy
+        --paths.train /dev/shm/train.spacy
+        --paths.dev /dev/shm/dev.spacy
         --gpu-id ${vars.gpu_id}
         --code transformer_components.py
       - >-
@@ -1777,8 +1777,8 @@ commands:
         --vars.run-name "mbert-crf-2"
         --components.transformer.model.name bert-base-multilingual-cased
         --output training/mbert-bilstm-crf/2/
-        --paths.train corpus/train.spacy
-        --paths.dev corpus/dev.spacy
+        --paths.train /dev/shm/train.spacy
+        --paths.dev /dev/shm/dev.spacy
         --gpu-id ${vars.gpu_id}
         --code transformer_components.py
       - >-
@@ -1790,8 +1790,8 @@ commands:
         --vars.run-name "mbert-crf-3"
         --components.transformer.model.name bert-base-multilingual-cased
         --output training/mbert-bilstm-crf/3/
-        --paths.train corpus/train.spacy
-        --paths.dev corpus/dev.spacy
+        --paths.train /dev/shm/train.spacy
+        --paths.dev /dev/shm/dev.spacy
         --gpu-id ${vars.gpu_id}
         --code transformer_components.py
       - >-
