@@ -66,11 +66,11 @@ workflows:
     # - "roberta_tagalog-bilstm-crf"
     # - "roberta_tagalog-bilstm"
     # - "roberta_tagalog-crf"
-    - "xlm_roberta-bilstm-crf"
-    - "xlm_roberta-bilstm"
-    - "xlm_roberta-crf"
-    - "mbert-bilstm-crf"
-    - "mbert-bilstm"
+    # - "xlm_roberta-bilstm-crf"
+    # - "xlm_roberta-bilstm"
+    # - "xlm_roberta-crf"
+    # - "mbert-bilstm-crf"
+    # - "mbert-bilstm"
     - "mbert-crf"
 
 commands:
@@ -1759,11 +1759,11 @@ commands:
         python -m spacy train
         configs/trf.cfg
         --nlp.lang ${vars.lang}
-        --vars.model-type bilstm-crf
+        --vars.model-type crf
         --vars.project-name ${vars.project_name}
         --vars.run-name "mbert-crf-1"
         --components.transformer.model.name bert-base-multilingual-cased
-        --output training/mbert-bilstm-crf/1/
+        --output training/mbert-crf/1/
         --paths.train corpus/train.spacy
         --paths.dev corpus/dev.spacy
         --gpu-id ${vars.gpu_id}
