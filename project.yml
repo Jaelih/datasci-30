@@ -69,7 +69,7 @@ workflows:
     # - "xlm_roberta-bilstm-crf"
     # - "xlm_roberta-bilstm"
     # - "xlm_roberta-crf"
-    - "mbert-bilstm-crf"
+    # - "mbert-bilstm-crf"
     # - "mbert-bilstm"
     - "mbert-crf"
 
